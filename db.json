@@ -5,8 +5,8 @@
       "name": "Shoyu Ramen",
       "restaurant": "Nonono",
       "image": "./assets/ramen/shoyu.jpg",
-      "rating": 7,
-      "comment": "Delish. Can't go wrong with a classic!"
+      "rating": "-4",
+      "comment": "BOOOOOOOOOO THIS SUCKS"
     },
     {
       "id": 2,
@@ -39,6 +39,22 @@
       "image": "./assets/ramen/kojiro.jpg",
       "rating": 6,
       "comment": "Perfect for a cold night."
+    },
+    {
+      "name": "Dale's Special Ramen",
+      "restaurant": "DALE's RAMEN JOINTTTT",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/b/bc/DaleEarnhardtSunglassesDriversSuit.jpg",
+      "rating": "55",
+      "comment": "BETTER THAN ALL THE REST",
+      "id": 6
+    },
+    {
+      "name": "Franks",
+      "restaurant": "REEED",
+      "image": "https://picsum.photos/200",
+      "rating": "3",
+      "comment": "fdd",
+      "id": 7
     }
   ]
 }

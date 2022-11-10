@@ -1,0 +1,36 @@
+console.log("sup brah")
+const ramenMenu = document.getElementById ("ramen-menu")
+
+const ramenName = document.getElementById("ramen-name");
+const ramenRestaurant = document.getElementById("ramen-restaurant");
+const ramenImage = document.getElementById("ramen-image");
+const commentDisplay = document.getElementById("comment-display");
+const ratingDisplay = document.getElementById("rating-display");
+const newRamen = document.getElementById("new-ramen")
+
+newRamen.addEventListener ("submit",(e) => {
+    e.preventDefault()
+    let img = document.createElement ("img")
+    img.src = newRamen.image.value
+    ramenMenu.append(img)
+})
+
+const request = async () => {
+    let req = await fetch("http://localhost:3000/ramens");
+    let res = await req.json()
+    res.forEach ((ramen) => {
+        let img = document.createElement ("img")
+        img.src = ramen.image
+        ramenMenu.append(img)
+        img.addEventListener ("click", () => {
+            ramenName.innerText = ramen.name
+            ramenRestaurant.innerText = ramen.restaurant
+            ramenImage.src = ramen.image
+            commentDisplay.innerText = ramen.comment
+            ratingDisplay.innerText = ramen.rating
+            
+        })
+    })
+}
+
+request ()

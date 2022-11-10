@@ -1,0 +1,35 @@
+const ramenUrl = "http://localhost:3000/ramens";
+const ramenMenu = document.getElementById("ramen-menu")
+
+const ramenRating = document.getElementById("rating-display")
+const ramenComment = document.getElementById ("comment-display")
+const ramenName = document.getElementById ("ramen-name")
+const ramenRestaurant = document.getElementById ("ramen-restaurant")
+const ramenDetailImg = document.getElementById ("ramen-image")
+
+const grabRamenImgs = async () => {
+    let req = await fetch (ramenUrl)
+    let res = await req.json()
+    res.forEach ((ramen, i) => {
+        let img = document.createElement("img")
+        img.src = ramen.img
+        img.addEventListener("click", () => {
+            ramenRating.innerText = ramen.rating
+            ramenComment.innerText = ramen.comment
+            ramenName.innerText = ramen.name
+            ramenRestaurant.innerText = ramen.restaurant
+            ramenDetailImg.src = ramen.image
+        })
+
+        ramenMenu.append(img)
+    })
+}
+const addNewRamen = document.getElementById("new-ramen")
+
+addNewRamen.addEventListener("submit", (e) => {
+    e.preventDefault()
+    let img = document.createElement("img")
+    img.src = addNewRamen.image.value
+    ramenMenu.append(img)
+})
+grabRamenImgs()

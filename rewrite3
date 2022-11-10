@@ -1,0 +1,73 @@
+// // write your code here
+// console.log("test test test")
+
+// // const ramenUrl = "http://localhost:3000/ramens";
+// // const ramenMenu = document.getElementById("ramen-menu");
+
+// // const grabRamenImgs = async () => {
+// //   let req = await fetch("http://localhost:3000/ramens");
+// //   let res = await req.json();
+// //   console.log (res)
+// //   res.forEach((ramen, i) => {
+// //     let img = document.createElement("img");
+// //     img.src = ramen.image
+// //     ramenMenu.append(img);
+// // });
+// // };
+// // grabRamenImgs()
+
+// // below is what Michael showed us in lecture to solve
+
+// // // for problem 1
+// const ramenMenu = document.getElementById("ramen-menu")
+
+// const request = async () => {
+//     let req = await fetch("http://localhost:3000/ramens");
+//     let res = await req.json()
+//     console.log (res)
+//     res.forEach ((ramen, i) => {
+//         let img = document.createElement("img")
+//         img.src = ramen.image
+//         //added to this function during problem 2
+//         img.addEventListener ("click", () => {
+//             ratingDisplay.innerText = ramen.rating
+//             commentDisplay.innerText = ramen.comment
+//             ramenRestaurant.innerText = ramen.restaurant
+//             ramenName.innerText = ramen.name
+//             ramenImage.src = ramen.image
+//         })
+//         ramenMenu.append(img)
+//     })
+// }
+// request ()
+// // end of problem 1
+
+// // for problem two
+// const ratingDisplay = document.getElementById("rating-display")
+// const commentDisplay = document.getElementById("comment-display")
+// const ramenImage = document.getElementById ("ramen-image")
+// const ramenRestaurant = document.getElementById ("ramen-restaurant")
+// const ramenName = document.getElementById ("ramen-name")
+
+// // //
+
+// // //part 3
+// const newRamen = document.getElementById (
+// )
+
+// newRamen.addEventListener ("submit", (e) => {
+//     e.preventDefault ()
+//     let newRamenObj =  {
+//         name: newRamenForm.name.value,
+//         restaurant: newRamenForm.restaurant.value,
+//         image: newRamenForm.image.value,
+//         rating: newRamenForm.rating.value,
+//         comment: newRamenForm.comment.value
+//     }
+//     // console.log (newRamen.name.value)
+//     // console.log (newRamen.restaurant.value)
+//     let img = document.createElement("img")
+//     img.src = newRamenForm.image.value
+//     ramenMenu.append(img)
+
+// })

@@ -20,9 +20,10 @@
 
   <!-- Ramen Details -->
   <div id="ramen-detail">
-    <img class="detail-image" src="./assets/image-placeholder.jpg" alt="Insert Name Here" />
-    <h2 class="name">Insert Name Here</h2>
-    <h3 class="restaurant">Insert Restaurant Here</h3>
+    <!-- (added new id's for the img, h2, h3) -->
+    <img id = "ramen-image" class="detail-image" src="https://cdn.shopify.com/s/files/1/2452/5701/products/indomie_f24e03b1-e3b7-4f0e-96e7-3523e4eab595_grande.png?v=1508987848" alt="Insert Name Here" />
+    <h2 id= "ramen-name" class="name">Insert Name Here</h2>
+    <h3 id= "ramen-restaurant" class="restaurant">Insert Restaurant Here</h3>
   </div>
 
   <h3>Rating:</h3>
@@ -46,9 +47,18 @@
     <label for="rating">Rating: </label>
     <input type="number" name="rating" id="new-rating" />
     <label for="new-comment">Comment: </label>
-    <textarea name="new-comment" id="new-comment"></textarea>
+    <textarea name="comment" id="new-comment"></textarea>
     <input type="submit" value="Create" />
   </form>
+
+<form id="edit-ramen">
+  <h4>Update the Featured Ramen</h4>
+  <label for="rating">Rating: </label>
+  <input type="number" name="rating" id="edit-rating" />
+  <label for="new-comment">Comment: </label>
+  <textarea name="new-comment" id="edit-comment"></textarea>
+  <input type="submit" value="Update" />
+</form>
 
 </body>
 
